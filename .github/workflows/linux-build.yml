@@ -7,18 +7,19 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
         with:
           node-version: 18
 
       - run: npm install
       - run: npm run build
 
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
+      - name: Upload AppImage
+        uses: actions/upload-artifact@v3
         with:
-          name: linux-build
-          path: dist/
+          name: alarm-linux
+          path: dist/*.AppImage
