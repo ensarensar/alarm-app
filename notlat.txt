@@ -1,0 +1,3 @@
+uygulama mac işletim sisteminde kaldırılınca bu kod ile config dosyasıda kaldırılmalı
+
+find ~/Library/Application\ Support -name config.json

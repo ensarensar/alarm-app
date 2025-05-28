@@ -1,0 +1,39 @@
+{
+  "name": "alarm-app",
+  "version": "1.0.0",
+  "description": "Mahalle Alarm Bildirici",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "author": "Gardaşın",
+  "license": "MIT",
+  "dependencies": {
+    "auto-launch": "^5.0.5",
+    "electron-log": "^5.0.0",
+    "electron-prompt": "^1.7.0",
+    "electron-store": "^8.1.0"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.12.0"
+  },
+  "build": {
+    "appId": "com.mahal.alarm",
+    "productName": "Grikod Alarm",
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+        "icon": "assets/icon.ico",
+        "target": "nsis"
+    },
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ]
+  }
+}
