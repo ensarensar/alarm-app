@@ -26,9 +26,16 @@
       "target": "dmg"
     },
     "win": {
-        "icon": "assets/icon.ico",
-        "target": "nsis"
+      "icon": "assets/icon.ico",
+      "target": "nsis"
     },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Utility"
+    },
+    "publish": null,
     "directories": {
       "output": "dist"
     },
