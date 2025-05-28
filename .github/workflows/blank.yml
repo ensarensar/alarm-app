@@ -8,22 +8,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Set up Node
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name: Install dependencies
-        run: npm install
+      - run: npm install
+      - run: npm run build
 
-      - name: Build app
-        run: npm run build
-
-      - name: Upload built package
-        uses: actions/upload-artifact@v3
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
         with:
-          name: grikod-alarm-linux
+          name: linux-build
           path: dist/
